@@ -1,4 +1,4 @@
-![스크린샷 2024-06-05 135831](https://github.com/Recyclingbottle/spring_Ex/assets/101244968/38af59b0-19f9-4cd5-8341-179052e97f19)## 0번 실습
+## 0번 실습
 
 ### **1. Hello Spring Boot Application 만들어보기**
 
