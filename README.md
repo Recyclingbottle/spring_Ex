@@ -1,4 +1,4 @@
-## 0번 실습
+![스크린샷 2024-06-05 135831](https://github.com/Recyclingbottle/spring_Ex/assets/101244968/38af59b0-19f9-4cd5-8341-179052e97f19)## 0번 실습
 
 ### **1. Hello Spring Boot Application 만들어보기**
 
@@ -11,13 +11,12 @@
 2. **HelloController**라는 새로운 컨트롤러 클래스를 만들고, **/hello** 경로로 접근했을 때 "Hello, Spring Boot!" 문자열을 반환하는 메서드를 구현합니다.
 
 [실행 화면]
+![스크린샷 2024-06-05 133441](https://github.com/Recyclingbottle/spring_Ex/assets/101244968/5030bd62-9674-42f2-b388-2b62886fb59c)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d52326c2-82e1-4712-b3c2-04eb54222598/f6b34076-9e55-4714-a372-6960e8f86bee/Untitled.png)
 
 [소스코드]
 
-[`HelloSpringBootApplication.java`](http://HelloSpringBootApplication.java) 그대로 유지 
-
+HelloSpringBootApplication.java 그대로 유지 
 ```jsx
 package com.example.hello_spring_boot;
 
@@ -33,10 +32,9 @@ public class HelloSpringBootApplication {
 }
 ```
 
-Controller 패키지 생성 후, 
+Controller 패키지 생성 후
 
-`HelloController` 
-
+HelloController 
 ```jsx
 package com.example.hello_spring_boot.controller;
 
@@ -69,7 +67,7 @@ dependencies {
 }
 ```
 
-[`application.properties`](http://application.properties) 에도 필요한 내용을 추가하자
+application.properties 에도 필요한 내용을 추가하자
 
 ```java
 spring.h2.console.enabled=true
@@ -85,10 +83,9 @@ spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 spring.jpa.hibernate.ddl-auto=update
 ```
 
-Model 패키지 생성 후 간단한 CRUD 를 위한 ITEM 이라는 모델을 생성하였다
+Model 패키지 생성 후 간단한 CRUD 를 위한 ITEM 이라는 모델을 생성
 
 Item.java
-
 ITEM Entitiy 는  id, name, description(String)
 
 ```java
@@ -136,7 +133,7 @@ public class Item {
 }
 ```
 
-jpa 를 이용하여 repository 패키지의 ItemRepository 를 만들었다
+JPA 를 이용하여 repository 패키지의 ItemRepository 를 만들었다
 
 ```java
 package com.example.hello_spring_boot.repository;
@@ -148,7 +145,7 @@ public interface ItemRepository extends JpaRepository<Item, Long> {
 }
 ```
 
-`ItemService` 과 `ItemController` 만들어준다.
+ItemService 과 ItemController 만들어준다.
 
 ```java
 package com.example.hello_spring_boot.service;
@@ -243,28 +240,18 @@ public class ItemController {
 ### 위에서 만든 내용을 POSTMAN 으로 테스트
 
 1. CREATE
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d52326c2-82e1-4712-b3c2-04eb54222598/4e02d8bb-55e4-41aa-b2bf-46e4c31975bb/Untitled.png)
-    
+  ![스크린샷 2024-06-05 135721](https://github.com/Recyclingbottle/spring_Ex/assets/101244968/8437b996-259a-4e76-a0a2-a9ed42e9618c)
+
 2. READ
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d52326c2-82e1-4712-b3c2-04eb54222598/fac125dd-fccd-4813-ba9a-ae6a35b1a4a2/Untitled.png)
-    
+   ![스크린샷 2024-06-05 135744](https://github.com/Recyclingbottle/spring_Ex/assets/101244968/dbacddc1-4fef-4654-9594-f429ecdcfc6a) 
 3. UPDATE
+    ![스크린샷 2024-06-05 135831](https://github.com/Recyclingbottle/spring_Ex/assets/101244968/2a387ce4-5c0a-453a-a979-6ee625b47ed7)
+4. DELETE
+   ![스크린샷 2024-06-05 135931](https://github.com/Recyclingbottle/spring_Ex/assets/101244968/9515065c-20c5-4cef-ab73-180c98c354c2)
+
+7. H2 Console 에서도 삽입, 삭제, 수정을 확인했습니다.
+    ![스크린샷 2024-06-05 140146](https://github.com/Recyclingbottle/spring_Ex/assets/101244968/64bf6674-b08f-453c-b941-f11156ca1105)
+
+  
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d52326c2-82e1-4712-b3c2-04eb54222598/fe61a855-9772-4e62-a653-c7941e9e9aec/Untitled.png)
-    
-4. DELETE 
-5. 
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d52326c2-82e1-4712-b3c2-04eb54222598/a06ec2e0-6a9d-4b46-8860-2a9300d015f0/Untitled.png)
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d52326c2-82e1-4712-b3c2-04eb54222598/1de06d61-00ca-4996-9312-f6de7aac09b6/Untitled.png)
-    
-6. H2 Console 에서도 삽입, 삭제, 수정을 확인했습니다.
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d52326c2-82e1-4712-b3c2-04eb54222598/593c5d23-14ab-4ab3-bd1f-66e2a535c551/Untitled.png)
-    
-7. GitHub Repository
-    
-    https://github.com/Recyclingbottle/spring_Ex
+
