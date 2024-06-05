@@ -7,7 +7,7 @@
 
 간단한 설명
 
-1. 스프링 부트 시작하기 프로젝트([https://start.spring.io/)를](https://start.spring.io/)%EB%A5%BC) 사용하여 새 스프링 부트 애플리케이션을 생성합니다.
+1. 스프링 부트 시작하기 프로젝트 https://start.spring.io/  사용하여 새 스프링 부트 애플리케이션을 생성합니다.
 2. **HelloController**라는 새로운 컨트롤러 클래스를 만들고, **/hello** 경로로 접근했을 때 "Hello, Spring Boot!" 문자열을 반환하는 메서드를 구현합니다.
 
 [실행 화면]
